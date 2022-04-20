@@ -1,12 +1,14 @@
 import React from 'react';
 import main from '../assets/images/main.svg';
-import logo from '../assets/images/logo.svg';
+import Wrapper from '../assets/wrappers/LandingPage';
+import { Link } from 'react-router-dom';
+import { Logo } from '../components';
 
 const Landing = () => {
 	return (
-		<main>
+		<Wrapper>
 			<nav>
-				<img src={logo} alt='jobify logo' className='logo' />
+				<Logo />
 			</nav>
 			<div className='container page'>
 				<div className='info'>
@@ -20,14 +22,12 @@ const Landing = () => {
 						Fingerstache tote bag pour-over vinyl normcore taiyaki vape salvia
 						ramps live-edge.{' '}
 					</p>
-					<button className='btn btn-hero'>
-						Login / Register
-					</button>
+					<Link to='/register' className='btn btn-hero'>Login / Register</Link>
 				</div>
-				<img src={main} alt="job hunt" className='img main-img'/>
+				<img src={main} alt='job hunt' className='img main-img' />
 			</div>
-		</main>
+		</Wrapper>
 	);
-}
+};
 
 export default Landing;
